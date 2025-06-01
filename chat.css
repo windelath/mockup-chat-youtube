@@ -31,9 +31,7 @@
 body {
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0);
-
 }
-
 
 #separator.yt-live-chat-renderer, #panel-pages.yt-live-chat-renderer {
   border: none !important;
@@ -103,21 +101,21 @@ yt-live-chat-text-message-renderer::before {
   display: block;
   position: absolute;
   left: 13px;
-  top: 44px;
+  /* top: 44px; */
   bottom: 4px;
   width: 5px;
   border-radius: 5px;
   background-color: #11193d;
-  animation: loadingMessage 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  animation: sideLine 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
-@keyframes loadingMessage {
+@keyframes sideLine {
   0% {
-    /* opacity: 0; */
+    opacity: 0;
     top: 20px;
   }
   100% {
-    /* opacity: 1;  */
+    opacity: 1; 
     top: 44px;
   }
 }

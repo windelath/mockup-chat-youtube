@@ -20,7 +20,7 @@ function sendChatMessage() {
   chipAuthorName.className = "style-scope yt-live-chat-text-message-renderer";
   const authorName = document.createElement("span");
   authorName.id = "author-name";
-  authorName.textContent = "You";
+  authorName.textContent = "test_message";
 
   const message = document.createElement("span");
   message.id = "message";

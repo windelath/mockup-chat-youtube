@@ -8,11 +8,10 @@
   </head>
   <body>
     <div class="container">
-      <h2>example Chat</h2>
-      <p>If you want to change the style, do it in <b>chat.css</b>.</p>
-
       <!-- Chat Preview -->
       <div id="example">
+        <h2>example Chat</h2>
+        <p>If you want to change the style, do it in <b>chat.css</b>.</p>
         <div id="example-container">
           <div id="fakebody">
             <yt-live-chat-renderer>
@@ -101,26 +100,28 @@
       </div>
 
       <!-- Chat Input Section -->
-      <div class="chat-input-section">
-        <h3>Send Message</h3>
-        <input type="text" id="chat-input" placeholder="พิมพ์ข้อความ..." />
-        <button onclick="sendChatMessage()">ส่งข้อความ</button>
-      </div>
+      <div class="input_layout">
+        <div class="chat-input-section">
+          <h3>Send Message</h3>
+          <input type="text" id="chat-input" placeholder="พิมพ์ข้อความ..." />
+          <button onclick="sendChatMessage()">ส่งข้อความ</button>
+        </div>
 
-      <div class="chat-input-section">
-        <h3>Super Chat</h3>
-        <input type="text" id="sc-name" placeholder="ชื่อผู้ส่ง" />
-        <input type="number" id="sc-amount" placeholder="จำนวนเงิน" />
-        <input type="text" id="sc-message" placeholder="ข้อความ Super Chat" />
-        <button onclick="sendSuperChat()">ส่ง Super Chat</button>
-      </div>
+        <div class="chat-input-section">
+          <h3>Super Chat</h3>
+          <input type="text" id="sc-name" placeholder="ชื่อผู้ส่ง" />
+          <input type="number" id="sc-amount" placeholder="จำนวนเงิน" />
+          <input type="text" id="sc-message" placeholder="ข้อความ Super Chat" />
+          <button onclick="sendSuperChat()">ส่ง Super Chat</button>
+        </div>
 
-      <div class="chat-input-section">
-        <h3>Legacy Sponsor</h3>
-        <input type="text" id="ls-name" placeholder="ชื่อสมาชิกใหม่" />
-        <button onclick="sendLegacySponsor()">ส่ง Sponsor</button>
-      </div>
+        <div class="chat-input-section">
+          <h3>Legacy Sponsor</h3>
+          <input type="text" id="ls-name" placeholder="ชื่อสมาชิกใหม่" />
+          <button onclick="sendLegacySponsor()">ส่ง Sponsor</button>
+        </div>
     </div>
+  </div>
 
     <script src="script.js"></script>
   </body>
