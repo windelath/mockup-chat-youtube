@@ -160,20 +160,21 @@ yt-live-chat-text-message-renderer #author-badges {
 }
 
 yt-live-chat-text-message-renderer #message {
-  color: #fff;
-  font-size: 12px;
   line-height: 16px;
+  overflow: hidden;
+  overflow-wrap: break-word;
   word-wrap: break-word;
+  word-break: break-word;
 }
 
-yt-live-chat-author-badge-renderer {
+/* yt-live-chat-author-badge-renderer {
   display: block;
   width: 16px;
   height: 16px;
   background-color: currentColor;
   margin-right: 4px;
   border-radius: 16px;
-}
+} */
 
 #before-content-buttons.yt-live-chat-text-message-renderer {
   display: inline-block;

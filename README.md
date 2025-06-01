@@ -22,6 +22,16 @@
 
 ---
 
+### 💡 แรงบันดาลใจ
+
+แนวคิดและโครงสร้างหลักของโปรเจกต์นี้ได้รับแรงบันดาลใจมาจาก [Septapus Chat v2](https://chatv2.septapus.com)  
+เว็บไซต์ที่จำลองแชทยูทูบแบบภาพนิ่งเพื่อนำไปใช้ในการตัดต่อวิดีโอ และการสตรีม
+
+เราได้นำแนวคิดนั้นมาต่อยอดให้สามารถแสดงผลแบบ **dynamic DOM** สำหรับการทดลอง CSS/JS ได้แบบสด ๆ  
+รวมถึงเพิ่มความสามารถในการใส่ข้อความ, Super Chat และ Sponsor ผ่านหน้า UI
+
+---
+
 ### ✅ ความสามารถ
 
 - แสดงข้อความแชทปกติ / Super Chat / Legacy Sponsor
@@ -35,10 +45,11 @@
 
 ```
 📂 your-project/
-├── index.html              # ตัวอย่าง mockup UI
-├── style.css               # CSS สำหรับตกแต่ง chat element
-├── script.js               # JavaScript สำหรับแสดงข้อความ
-└── README.md               # คู่มือสองภาษา
+├── index.html   # ตัวอย่าง mockup UI
+├── chat.css     # CSS สำหรับตกแต่ง chat element แก้ไขที่นี้
+├── main.css     # CSS หลักของ chat youtube
+├── script.js    # JavaScript สำหรับแสดงข้อความ
+└── README.md    # คู่มือสองภาษา
 ```
 
 ---
@@ -68,6 +79,14 @@ This project allows you to **mock and style YouTube Live Chat** in your own fron
 - We've tried to make it as close to the real UI as possible
 
 > For mockups, theming, and front-end styling only.
+
+---
+
+### 💡 Inspiration
+
+This project is inspired by [Septapus Chat v2](https://chatv2.septapus.com) — a web tool designed to generate mock images of YouTube chat for use in video production.
+
+This implementation extends the idea into a **dynamic DOM-based simulator** that lets you interactively preview chat behavior, test animations, and even prototype chat-related interfaces directly in-browser.
 
 ---
 
@@ -107,7 +126,6 @@ This project allows you to **mock and style YouTube Live Chat** in your own fron
 
 MIT — Free to use, share, and customize.
 
-
 ---
 
 ### 👨‍💻 เหมาะสำหรับใคร?
@@ -119,7 +137,6 @@ MIT — Free to use, share, and customize.
 
 > This project is recommended for developers/designers with **basic HTML and CSS knowledge** who want to build or customize YouTube-style live chat components.
 
-
 ---
 
 ### 🙌 สนับสนุนโปรเจกต์นี้
@@ -130,10 +147,10 @@ MIT — Free to use, share, and customize.
 > If you find this project helpful and would like to support further development,  
 > feel free to donate via 👉 [https://tipme.in.th/windelath](https://tipme.in.th/windelath)
 
-
 ---
 
 ### 📬 ช่องทางติดตาม / ติดต่อ
 
-สามารถติดตามหรือติดต่อผู้พัฒนาเพิ่มเติมได้ที่  
-X (Twitter): [https://x.com/Windlth_FIXIXTN](https://x.com/Windlth_FIXIXTN)
+สามารถติดตามหรือติดต่อผู้พัฒนาเพิ่มเติมได้ที่:  
+- X (Twitter): [@Windlth_FIXIXTN](https://x.com/Windlth_FIXIXTN)  
+- YouTube: [Windelathch.FIXIXTN](https://www.youtube.com/@Windelathch.FIXIXTN)
