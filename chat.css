@@ -1,0 +1,303 @@
+/* you can get font from google font*/
+@import url("https://fonts.googleapis.com/css2?family=Mitr&display=swap");
+
+:root {
+  --mainFontFamily: "Mitr";
+
+  /* need to close timestamps change "block" to "none" */
+  /* The display is not "block", you can fix it as you want. */
+  --timestampsDisplay: block; 
+
+  /* 
+  If you got the fonts from Google, 
+  you need to change the value in the variable to import family=[your fonts] which you got here to "Mitr". 
+  */
+  --channelNameFontFamily:"Mitr";
+  --channelNameBackGroundColor: #11193d;
+  --channelNameFontColor: #ffffff;
+  --channelNameFontSize: 18px;
+  --channelNamePadding: 0.2rem 1.2rem;
+  --channelNameBorderRadius: 25px;
+
+  --messageFontFamily:"Mitr";
+  --messageBackGroundColor: #b9bcd2a3;
+  --messageFontColor: #272b3a;
+  --messageFontSize: 16px;
+  --messagePadding: 0.4rem 2.4rem;
+  --messageBorderRadius: 12px;
+}
+
+/* Background colors*/
+body {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0);
+  font-family: var(--mainFontFamily), sans-serif;
+}
+
+#separator.yt-live-chat-renderer, #panel-pages.yt-live-chat-renderer {
+  border: none !important;
+}
+/* Transparent background. */
+yt-live-chat-renderer {
+  background-color: transparent !important;
+}
+yt-live-chat-text-message-renderer,
+yt-live-chat-text-message-renderer[is-highlighted] {
+  background-color: transparent !important;
+}
+
+yt-live-chat-text-message-renderer[author-type="owner"],
+yt-live-chat-text-message-renderer[author-type="owner"][is-highlighted] {
+  background-color: transparent !important;
+}
+
+yt-live-chat-text-message-renderer[author-type="moderator"],
+yt-live-chat-text-message-renderer[author-type="moderator"][is-highlighted] {
+  background-color: transparent !important;
+}
+
+yt-live-chat-text-message-renderer[author-type="member"],
+yt-live-chat-text-message-renderer[author-type="member"][is-highlighted] {
+  background-color: transparent !important;
+}
+
+yt-live-chat-author-chip #author-name {
+  background-color: transparent !important;
+}
+
+yt-live-chat-text-message-renderer {
+  position: relative;
+  padding-left: 16px !important;
+  margin-bottom: 8px;
+  border-radius: 8px;
+}
+
+/* Add visual effects to chat messages. */
+yt-live-chat-text-message-renderer::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 13px;
+  top: 44px;
+  bottom: 4px;
+  width: 5px;
+  border-radius: 2px;
+  background-color: #11193d;
+}
+
+yt-live-chat-text-message-renderer #content,
+yt-live-chat-legacy-paid-message-renderer #content {
+  overflow: initial !important;
+}
+
+/* Hide scrollbar. */
+yt-live-chat-item-list-renderer #items {
+  overflow: hidden !important;
+}
+
+yt-live-chat-item-list-renderer #item-scroller {
+  overflow: hidden !important;
+}
+
+/* Hide header and input. */
+yt-live-chat-header-renderer,
+yt-live-chat-message-input-renderer {
+  display: none !important;
+}
+
+/* Reduce side padding. */
+yt-live-chat-text-message-renderer,
+yt-live-chat-legacy-paid-message-renderer {
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+}
+
+yt-live-chat-paid-message-renderer #header {
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+}
+
+/* Avatars. */
+yt-live-chat-text-message-renderer #author-photo,
+yt-live-chat-paid-message-renderer #author-photo,
+yt-live-chat-legacy-paid-message-renderer #author-photo {
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 24px !important;
+  margin-right: 6px !important;
+}
+
+/* Hide badges. */
+yt-live-chat-text-message-renderer #author-badges {
+  display: none !important;
+  vertical-align: text-top !important;
+}
+
+/* Timestamps. */
+yt-live-chat-text-message-renderer #timestamp {
+  display: var(--timestampsDisplay);
+  color: #000000 !important;
+  font-size: 16px !important;
+  line-height: 16px !important;
+}
+
+/* Badges. */
+yt-live-chat-text-message-renderer #author-name[type="owner"],
+yt-live-chat-text-message-renderer #author-name.owner,
+yt-live-chat-text-message-renderer
+  yt-live-chat-author-badge-renderer[type="owner"] {
+  color: #ffd600 !important;
+}
+
+yt-live-chat-text-message-renderer #author-name[type="moderator"],
+yt-live-chat-text-message-renderer #author-name.moderator,
+yt-live-chat-text-message-renderer
+  yt-live-chat-author-badge-renderer[type="moderator"] {
+  color: #5e84f1 !important;
+}
+
+yt-live-chat-text-message-renderer #author-name[type="member"],
+yt-live-chat-text-message-renderer #author-name.member,
+yt-live-chat-text-message-renderer
+  yt-live-chat-author-badge-renderer[type="member"] {
+  color: #0f9d58 !important;
+}
+
+/* Channel names. */
+yt-live-chat-text-message-renderer #author-name {
+  /* background-color: var(--channelNameBackGroundColor) !important; */
+  color: var(--channelNameFontColor) !important;
+  font-family: var(--messageFontFamily);
+  font-size: var(--channelNameFontSize) !important;
+  /* padding: var(--channelNamePadding); */
+  border-radius: var(--channelNameBorderRadius) !important;
+}
+
+#chat-badges.yt-live-chat-author-chip {
+  display: flex;
+  align-items: center;
+  margin-left: 2px;
+}
+
+yt-live-chat-author-chip.style-scope.yt-live-chat-text-message-renderer{
+  background-color: var(--channelNameBackGroundColor) !important;
+  color: var(--channelNameFontColor) !important;
+  font-family: var(--messageFontFamily);
+  font-size: var(--channelNameFontSize) !important;
+  padding: var(--channelNamePadding);
+  border-radius: var(--channelNameBorderRadius) !important;
+}
+
+/* yt-live-chat-text-message-renderer #author-name::after {
+  content: ":";
+  margin-left: 2px;
+} */
+
+/* Messages. */
+yt-live-chat-text-message-renderer #message{
+  display: block;
+  background-color: var(--messageBackGroundColor);
+  color: var(--messageFontColor) !important;
+  font-family: var(--channelNameFontFamily);
+  font-size: var(--messageFontSize) !important;
+  line-height: normal !important;
+  letter-spacing: normal !important;
+  margin-top: 10px;
+  padding: var(--messagePadding);
+  border-radius: var(--messageBorderRadius);
+}
+
+/* SuperChat/Fan Funding Messages. */
+yt-live-chat-paid-message-renderer #author-name,
+yt-live-chat-paid-message-renderer #author-name *,
+yt-live-chat-legacy-paid-message-renderer #event-text,
+yt-live-chat-legacy-paid-message-renderer #event-text * {
+  color: #ffffff !important;
+  /* font-family: "Changa One"; */
+  font-size: 20px !important;
+  line-height: 20px !important;
+}
+
+yt-live-chat-paid-message-renderer #purchase-amount,
+yt-live-chat-paid-message-renderer #purchase-amount *,
+yt-live-chat-legacy-paid-message-renderer #detail-text,
+yt-live-chat-legacy-paid-message-renderer #detail-text * {
+  color: #ffffff !important;
+  font-size: 18px !important;
+  line-height: 18px !important;
+}
+
+yt-live-chat-paid-message-renderer #content,
+yt-live-chat-paid-message-renderer #content * {
+  color: #ffffff !important;
+  font-size: 18px !important;
+  line-height: 18px !important;
+}
+
+yt-live-chat-moderation-message-renderer {
+  display: none !important;
+}
+
+yt-live-chat-paid-message-renderer {
+  margin: 4px 0 !important;
+}
+
+yt-live-chat-legacy-paid-message-renderer {
+  background-color: #0f9d58 !important;
+  margin: 4px 0 !important;
+}
+
+yt-live-chat-text-message-renderer a,
+yt-live-chat-legacy-paid-message-renderer a {
+  text-decoration: none !important;
+}
+
+yt-live-chat-text-message-renderer[is-deleted],
+yt-live-chat-legacy-paid-message-renderer[is-deleted] {
+  display: none !important;
+}
+
+yt-live-chat-ticker-renderer {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+yt-live-chat-ticker-renderer {
+  display: none !important;
+}
+
+yt-live-chat-ticker-paid-message-item-renderer,
+yt-live-chat-ticker-paid-message-item-renderer *,
+yt-live-chat-ticker-sponsor-item-renderer,
+yt-live-chat-ticker-sponsor-item-renderer * {
+  color: #ffffff !important;
+}
+
+yt-live-chat-mode-change-message-renderer,
+yt-live-chat-viewer-engagement-message-renderer,
+yt-live-chat-restricted-participation-renderer {
+  display: none !important;
+}
+
+yt-live-chat-banner-manager {
+  display: none !important;
+}
+
+yt-live-chat-action-panel-renderer,
+yt-live-chat-renderer #action-panel {
+  display: none !important;
+}
+yt-reaction-control-panel-overlay,
+yt-reaction-control-panel-overlay-view-model,
+yt-reaction-control-panel-view-model {
+  display: none !important;
+}
+yt-live-chat-viewer-engagement-message-renderer {
+  display: none !important;
+}
+#fakebody {
+  background-color: rgba(0, 0, 0, 0);
+}
+yt-live-chat-text-message-renderer,
+yt-live-chat-legacy-paid-message-renderer {
+  animation: none !important;
+}
